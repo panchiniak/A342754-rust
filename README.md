@@ -3,100 +3,72 @@ This is the OEIS sequence #A342754.
 I wanted to see which would run faster: node.js or rust and it came out that rust is twice as fast. 
 
 <pre>
-x   
-    
-x x    
-      
-x  x     
- x       
-x   x      
-          
-x x x  x       
-            
-x     x        
- x  x           
-x  x    x         
-                
-x x   x   x          
-                  
-x  x x     x           
- x    x               
-x         x            
-                      
-x x x  x  x    x             
-   x                     
-x           x              
- x      x                   
-x  x   x       x               
-                            
-x x  x x    x     x                
-                              
-x  x    x        x                 
- x        x                       
-x               x                  
-   x  x                             
-x x x  x   x   x      x                   
-                                    
-x                 x                    
- x          x                           
-x  x x   x  x          x                     
-                                        
-x x   x x       x       x                      
-                                          
-x  x       x           x                       
- x  x    x      x                               
-x                     x                        
-                                              
-x x x  x  x    x    x        x                         
-     x                                           
-x   x     x               x                          
- x              x                                   
-x  x         x             x                           
-                                                    
-x x   x   x         x         x                            
-   x      x                                             
-x  x   x x      x              x                             
- x                x                                       
-x                           x                              
-                                                          
-x x x x x    x  x   x     x          x                               
-                                                            
-x                             x                                
- x    x  x            x                                           
-x  x    x        x                x                                 
-   x        x                                                     
-x x   x     x           x           x                                  
-                                                                  
-x  x             x                 x                                   
- x                    x                                               
-x   x  x   x    x                     x                                    
-                                                                      
-x x x  x  x x   x      x      x            x                                     
-                                                                        
-x                                   x                                      
- x  x          x          x                                                   
-x  x               x                   x                                       
-     x    x                                                                   
-x x   x       x             x             x                                        
-                                                                              
-x  x x   x  x      x    x                    x                                         
- x      x                  x                                                       
-x                                       x                                          
-                                                                                  
-x x x  x x     x  x       x       x              x                                           
-   x            x                                                                     
-x                                         x                                            
- x                          x                                                           
-x  x    x   x           x                      x                                             
-                                                                                        
-x x  x x   x x     x   x            x               x                                              
-     x      x                                                                               
-x  x                   x                       x                                               
- x                            x                                                               
-x                                             x                                                
-   x              x                                                                             
-x x x  x  x    x    x        x        x                x                                                 
-                                                                                                
-x     x       x                                   x                                                  
- x      x  x                      x                                          
+
+
+
+⚫
+
+⚫⚫
+
+⚫⚪⚫
+⚪⚫
+⚫⚪⚫
+
+⚫⚫⚫⚪⚫
+
+⚫⚪⚪⚫
+⚪⚫⚪⚫
+⚫⚪⚫⚪⚪⚫
+
+⚫⚫⚪⚫⚪⚫
+
+⚫⚪⚫⚫⚪⚪⚫
+⚪⚫⚪⚪⚫
+⚫⚪⚪⚪⚪⚫
+
+⚫⚫⚫⚪⚫⚪⚫⚪⚪⚫
+⚪⚪⚫
+⚫⚪⚪⚪⚪⚪⚫
+⚪⚫⚪⚪⚪⚫
+⚫⚪⚫⚪⚫⚪⚪⚪⚫
+
+⚫⚫⚪⚫⚫⚪⚪⚫⚪⚪⚫
+
+⚫⚪⚫⚪⚪⚫⚪⚪⚪⚪⚫
+⚪⚫⚪⚪⚪⚪⚫
+⚫⚪⚪⚪⚪⚪⚪⚪⚫
+⚪⚪⚫⚪⚫
+⚫⚫⚫⚪⚫⚪⚫⚪⚫⚪⚪⚪⚫
+
+⚫⚪⚪⚪⚪⚪⚪⚪⚪⚫
+⚪⚫⚪⚪⚪⚪⚪⚫
+⚫⚪⚫⚫⚪⚫⚪⚫⚪⚪⚪⚪⚪⚫
+
+⚫⚫⚪⚫⚫⚪⚪⚪⚫⚪⚪⚪⚫
+
+⚫⚪⚫⚪⚪⚪⚫⚪⚪⚪⚪⚪⚫
+⚪⚫⚪⚫⚪⚪⚫⚪⚪⚪⚫
+⚫⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪⚫
+
+⚫⚫⚫⚪⚫⚪⚫⚪⚪⚫⚪⚪⚫⚪⚪⚪⚪⚫
+⚪⚪⚪⚫
+⚫⚪⚫⚪⚪⚫⚪⚪⚪⚪⚪⚪⚪⚫
+⚪⚫⚪⚪⚪⚪⚪⚪⚪⚫
+⚫⚪⚫⚪⚪⚪⚪⚫⚪⚪⚪⚪⚪⚪⚫
+
+⚫⚫⚪⚫⚪⚫⚪⚪⚪⚪⚫⚪⚪⚪⚪⚫
+⚪⚪⚫⚪⚪⚪⚫
+⚫⚪⚫⚪⚫⚫⚪⚪⚪⚫⚪⚪⚪⚪⚪⚪⚪⚫
+⚪⚫⚪⚪⚪⚪⚪⚪⚪⚪⚫
+⚫⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪⚫
+
+⚫⚫⚫⚫⚫⚪⚪⚫⚪⚫⚪⚫⚪⚪⚫⚪⚪⚪⚪⚪⚫
+
+⚫⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪⚪⚫
+⚪⚫⚪⚪⚫⚪⚫⚪⚪⚪⚪⚪⚪⚫
+⚫⚪⚫⚪⚪⚫⚪⚪⚪⚪⚫⚪⚪⚪⚪⚪⚪⚪⚪⚫
+⚪⚪⚫⚪⚪⚪⚪⚫
+⚫⚫⚪⚫⚪⚪⚫⚪⚪⚪⚪⚪⚫⚪⚪⚪⚪⚪⚫
 </pre>
+Then you can look for patterns, even across multiple lines:
+<pre>^⚪⚫⚪{1}.+(\n.*){1}^⚫⚪⚫{1}</pre>
