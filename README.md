@@ -72,5 +72,5 @@ The program may be adjusted for generating a numberscope picture:
 ⚪⚪⚫⚪⚪⚪⚪⚫
 ⚫⚫⚪⚫⚪⚪⚫⚪⚪⚪⚪⚪⚫⚪⚪⚪⚪⚪⚫
 </pre>
-Then you can look for patterns, even across multiple lines:
-<pre>^⚪⚫⚪{1}.+(\n.*){1}^⚫⚪⚫{1}</pre>
+Then you can use regex to look for patterns, even across multiple lines:
+<pre>/^⚪⚫⚪{1}.+(\n.*){1}^⚫⚪⚫{1}/</pre>
